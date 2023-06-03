@@ -6,9 +6,10 @@ function magicSum(arr, magicNum) {
 
             let sum = Number(arr[index]) + Number(arr[j])
 
-            if(sum === magicNum){
-                let result = '';
+            if (sum === magicNum) {
+
                 console.log(`${arr[index]} ${arr[j]}`)
+
             }
 
         }
