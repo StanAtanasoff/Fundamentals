@@ -1,7 +1,10 @@
 function sumFirstLast(data) {
+    if(data.length === 1){
+        return console.log(Number(data.toString()));
+    }
 
-    let first = data[0];
-    let last = data[data.length - 1];
-    console.log(first + last)
+    let sum = Number(data.shift()) + Number(data.pop());
+    console.log(sum);
+
 }
-sumFirstLast([20, 30, 40])
+sumFirstLast(['5'])

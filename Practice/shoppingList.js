@@ -19,7 +19,7 @@ function shoppingList(input) {
             case 'Rearrange':
                 rearrange(groceries, item);
                 break;
-            default: break; // needs to include default case for invalid command('Gosho'), otherwise will not break
+            default: break;
         }
         line = input.shift();
     }
