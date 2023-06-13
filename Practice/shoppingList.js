@@ -7,18 +7,10 @@ function shoppingList(input) {
         let [command, item, newItem] = line.split(' ');
 
         switch (command) {
-            case 'Urgent':
-                urgent(groceries, item);
-                break;
-            case 'Unnecessary':
-                unnecessery(groceries, item);
-                break;
-            case 'Correct':
-                correct(groceries, item, newItem);
-                break;
-            case 'Rearrange':
-                rearrange(groceries, item);
-                break;
+            case 'Urgent': urgent(groceries, item); break;
+            case 'Unnecessary': unnecessery(groceries, item); break;
+            case 'Correct': correct(groceries, item, newItem); break;
+            case 'Rearrange': rearrange(groceries, item); break;
             default: break;
         }
         line = input.shift();
@@ -49,7 +41,6 @@ function shoppingList(input) {
     function rearrange(list, item) {
         if (list.includes(item) == true) {
             let index = list.indexOf(item);
-            // splice and push can not be chained, otherwise will not include removed item at end of list
             list.splice(index, 1);
             list.push(item);
         }
